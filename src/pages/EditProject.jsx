@@ -18,7 +18,7 @@ const EditProject = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.put(`http://localhost:8800/api/projects/${id}`,{id,title,desc,image,projectLink})
+        axios.put(`https://porfolio-backend-e3rt.onrender.com/api/projects/${id}`,{id,title,desc,image,projectLink})
         .then(res=>{dispatch(updateProject(res.data))
             navigate('/projects')
         })
