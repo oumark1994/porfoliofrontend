@@ -29,7 +29,7 @@ const CreateHero = () => {
         formdata.append('count1',count1)
         formdata.append('count2',count2)
         formdata.append('btnText',btnText)
-        axios.post('http://localhost:8800/api/heroes',formdata)
+        axios.post('https://porfolio-backend-e3rt.onrender.com/api/heroes',formdata)
         .then(res=>{dispatch(addHero(res.data))
             navigate('/hero')
         })
