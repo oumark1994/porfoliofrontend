@@ -13,7 +13,7 @@ const Hero = () => {
   useEffect(()=>{
 const getHeroes = async ()=>{
       try {
-          const response = await axios.get("http://localhost:8800/api/heroes");
+          const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/heroes");
           dispatch(gethero(response.data));
       } catch (err) {
           console.log(err)
@@ -63,7 +63,7 @@ const getHeroes = async ()=>{
         {/* sec col */}
         <div className="md:h-[37rem] h-96">
           <img
-            src={`http://localhost:8800/images/${hero.image}`}
+            src={`https://porfolio-backend-e3rt.onrender.com/images/${hero.image}`}
             data-aos="slide-up"
             alt="..."
             className="h-full object-cover"
