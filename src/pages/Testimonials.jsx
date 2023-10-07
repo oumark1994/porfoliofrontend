@@ -11,7 +11,7 @@ const Testimonials = () => {
     useEffect(()=>{
   const gettestimonials = async ()=>{
         try {
-            const response = await axios.get("http://localhost:8800/api/testimonials");
+            const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/testimonials");
             dispatch(getTestimonials(response.data));
         } catch (err) {
             console.log(err)
@@ -21,7 +21,7 @@ const Testimonials = () => {
     },[])
     const handleDelete = (id)=>{
      
-         axios.delete(`http://localhost:8800/api/testimonials/${id}`).then(res=>{
+         axios.delete(`https://porfolio-backend-e3rt.onrender.com/api/testimonials/${id}`).then(res=>{
           dispatch(deleteTestimonial(id));
 
           console.log(res)
