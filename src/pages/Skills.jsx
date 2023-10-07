@@ -67,7 +67,7 @@ const Skills = () => {
                       return <tr>
 
                         <td className="border-bottom-0">
-                        <img src={`http://localhost:8800/images/${skill.logo}`} alt="" width="35" height="35" class="rounded-circle" />                 
+                        <img src={`https://porfolio-backend-e3rt.onrender.com/images/${skill.logo}`} alt="" width="35" height="35" class="rounded-circle" />                 
                         </td>
                         <td className="border-bottom-0">
                           <p className="mb-0 fw-normal">{skill.name}</p>
