@@ -17,7 +17,7 @@ const EditTestimonial = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.put(`http://localhost:8800/api/testimonials/${id}`,{id,name,review,image})
+        axios.put(`https://porfolio-backend-e3rt.onrender.com/api/testimonials/${id}`,{id,name,review,image})
         .then(res=>{dispatch(updateTestimonial(res.data))
             navigate('/testimonials')
         })
