@@ -22,7 +22,7 @@ const EditHero = () => {
     const [image,setImage] = useState(hero.image)
     const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.put(`http://localhost:8800/api/heroes/${id}`,{id,title,firstname,lastname,image,btnText,text1,text2,count1,count2})
+        axios.put(`https://porfolio-backend-e3rt.onrender.com/api/heroes/${id}`,{id,title,firstname,lastname,image,btnText,text1,text2,count1,count2})
         .then(res=>{dispatch(updateHero(res.data))
             navigate('/hero')
         })
