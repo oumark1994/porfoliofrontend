@@ -16,7 +16,7 @@ const Testimonials = () => {
   useEffect(()=>{
 const gettestimonials = async ()=>{
       try {
-          const response = await axios.get("http://localhost:8800/api/testimonials");
+          const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/testimonials");
           dispatch(getTestimonials(response.data));
       } catch (err) {
           console.log(err)
@@ -59,7 +59,7 @@ const gettestimonials = async ()=>{
                border-slate-200 md:flex-row flex-col
                 ${activeIndex !== i && "scale-75 blur-sm"}`}
               >
-                <img  src={`http://localhost:8800/images/${content.image}`} alt="..." className="h-24" />
+                <img  src={`https://porfolio-backend-e3rt.onrender.com/images/${content.image}`} alt="..." className="h-24" />
                 <div>
                   <p className="sm:text-base text-sm">{content.review}</p>
                   <br />
