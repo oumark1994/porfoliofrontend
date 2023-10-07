@@ -12,7 +12,7 @@ const Projects = () => {
     useEffect(()=>{
   const getprojects = async ()=>{
         try {
-            const response = await axios.get("http://localhost:8800/api/projects");
+            const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/projects");
             dispatch(getProjects(response.data));
         } catch (err) {
             console.log(err)
@@ -22,7 +22,7 @@ const Projects = () => {
     },[])
     const handleDelete = (id)=>{
      
-         axios.delete(`http://localhost:8800/api/projects/${id}`).then(res=>{
+         axios.delete(`https://porfolio-backend-e3rt.onrender.com/api/projects/${id}`).then(res=>{
           dispatch(deleteProject(id));
 
           console.log(res)
