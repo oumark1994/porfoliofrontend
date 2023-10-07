@@ -12,7 +12,7 @@ const Skills = () => {
     useEffect(()=>{
   const getSkills = async ()=>{
         try {
-            const response = await axios.get("http://localhost:8800/api/skills");
+            const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/skills");
             dispatch(getskills(response.data));
         } catch (err) {
             console.log(err)
@@ -22,7 +22,7 @@ const Skills = () => {
     },[])
     const handleDelete = (id)=>{
      
-         axios.delete(`http://localhost:8800/api/skills/${id}`).then(res=>{
+         axios.delete(`https://porfolio-backend-e3rt.onrender.com/api/skills/${id}`).then(res=>{
           dispatch(deleteSkill(id));
 
           console.log(res)
