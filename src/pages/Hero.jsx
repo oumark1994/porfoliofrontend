@@ -22,7 +22,7 @@ const Hero = () => {
     },[])
     const handleDelete = (id)=>{
      
-         axios.delete(`http://localhost:8800/api/heroes/${id}`).then(res=>{
+         axios.delete(`https://porfolio-backend-e3rt.onrender.com/api/heroes/${id}`).then(res=>{
           dispatch(deletehero(id));
 
           console.log(res)
@@ -73,7 +73,7 @@ const Hero = () => {
                     <tbody>
                   {heroes.map(hero=>{
                       return <tr>
-                         <img src={`http://localhost:8800/images/${hero.image}`} alt="" width="35" height="35" class="rounded-circle" /> 
+                         <img src={`https://porfolio-backend-e3rt.onrender.com/images/${hero.image}`} alt="" width="35" height="35" class="rounded-circle" /> 
                         <td className="border-bottom-0">
                           <p className="mb-0 fw-normal">{hero.title}</p>
                         </td>
