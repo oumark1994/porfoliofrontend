@@ -32,7 +32,7 @@ const Skills = () => {
   useEffect(()=>{
 const getSkills = async ()=>{
       try {
-          const response = await axios.get("http://localhost:8800/api/skills");
+          const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/skills");
           dispatch(getskills(response.data));
       } catch (err) {
           console.log(err)
@@ -82,7 +82,7 @@ const getSkills = async ()=>{
         
           <div key={i}  className="bg-white sm:cursor-pointer relative group w-full flex items-center gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200">
             <div>
-              <img className="w-11 h-11 object-fit rounded-full group-hover:scale-125 duration-200" src={`http://localhost:8800/images/${skill.logo}`} alt="..." />
+              <img className="w-11 h-11 object-fit rounded-full group-hover:scale-125 duration-200" src={`https://porfolio-backend-e3rt.onrender.com/images/${skill.logo}`} alt="..." />
             </div>
             <div>
               <h6>{skill.name}</h6>
