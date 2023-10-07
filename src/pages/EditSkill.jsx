@@ -16,7 +16,7 @@ const EditSkill = () => {
     const [logo,setLogo] = useState(skill.logo)
     const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.put(`http://localhost:8800/api/skills/${id}`,{id,name,para,logo})
+        axios.put(`https://porfolio-backend-e3rt.onrender.com/api/skills/${id}`,{id,name,para,logo})
         .then(res=>{dispatch(updateSkill(res.data))
             navigate('/skills')
         })
