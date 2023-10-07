@@ -11,7 +11,7 @@ const Services = () => {
     useEffect(()=>{
   const getservices = async ()=>{
         try {
-            const response = await axios.get("http://localhost:8800/api/services");
+            const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/services");
             dispatch(getServices(response.data));
         } catch (err) {
             console.log(err)
@@ -21,7 +21,7 @@ const Services = () => {
     },[])
     const handleDelete = (id)=>{
      
-         axios.delete(`http://localhost:8800/api/services/${id}`).then(res=>{
+         axios.delete(`https://porfolio-backend-e3rt.onrender.com/api/services/${id}`).then(res=>{
           dispatch(deleteService(id));
 
           console.log(res)
