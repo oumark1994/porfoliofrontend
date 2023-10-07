@@ -19,7 +19,7 @@ const Createservice = () => {
         formdata.append('para',para)
         formdata.append('logo',logo)
       
-        axios.post('http://localhost:8800/api/services',formdata)
+        axios.post('https://porfolio-backend-e3rt.onrender.com/api/services',formdata)
         .then(res=>{dispatch(addService(res.data))
             navigate('/services')
         })
