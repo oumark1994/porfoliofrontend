@@ -19,7 +19,7 @@ const Projects = () => {
   useEffect(()=>{
 const getprojects = async ()=>{
       try {
-          const response = await axios.get("http://localhost:8800/api/projects");
+          const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/projects");
           dispatch(getProjects(response.data));
       } catch (err) {
           console.log(err)
@@ -60,7 +60,7 @@ const getprojects = async ()=>{
                 key={i}
                 className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit"
               >
-                <img  src={`http://localhost:8800/images/${content.image}`} alt="..." />
+                <img  src={`https://porfolio-backend-e3rt.onrender.com/images/${content.image}`} alt="..." />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
                   <Link  to={content.projectLink} className="font-bold text-gray self-end">
