@@ -17,7 +17,7 @@ const Register = () => {
    const handleSubmit =(e)=>{
     e.preventDefault()
     
-      const url = "http://localhost:8800/api/users/signup";
+      const url = "https://porfolio-backend-e3rt.onrender.com/api/users/signup";
        axios.post(url,data)
       .then(res=>{
         navigate("/login")
