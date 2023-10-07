@@ -66,7 +66,7 @@ const Services = () => {
                       return <tr>
 
                         <td className="border-bottom-0">
-                        <img src={`http://localhost:8800/images/${service.logo}`} alt="" width="35" height="35" class="rounded-circle" />                 
+                        <img src={`https://porfolio-backend-e3rt.onrender.com/images/${service.logo}`} alt="" width="35" height="35" class="rounded-circle" />                 
 
                         </td>
                         <td className="border-bottom-0">
