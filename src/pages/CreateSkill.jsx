@@ -19,7 +19,7 @@ const CreateSkill = () => {
         formdata.append('para',para)
         formdata.append('name',name)
       
-        axios.post('http://localhost:8800/api/skills',formdata)
+        axios.post('https://porfolio-backend-e3rt.onrender.com/api/skills',formdata)
         .then(res=>{dispatch(addSkill(res.data))
             navigate('/skills')
         })
