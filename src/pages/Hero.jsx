@@ -12,7 +12,7 @@ const Hero = () => {
     useEffect(()=>{
   const getHeroes = async ()=>{
         try {
-            const response = await axios.get("http://localhost:8800/api/heroes");
+            const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/heroes");
             dispatch(gethero(response.data));
         } catch (err) {
             console.log(err)
