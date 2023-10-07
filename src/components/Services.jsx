@@ -10,7 +10,7 @@ const Services = () => {
   useEffect(()=>{
 const getservices = async ()=>{
       try {
-          const response = await axios.get("http://localhost:8800/api/services");
+          const response = await axios.get("https://porfolio-backend-e3rt.onrender.com/api/services");
           dispatch(getServices(response.data));
       } catch (err) {
           console.log(err)
@@ -38,7 +38,7 @@ const getservices = async ()=>{
               hover:!blur-none"
             >
               
-              <img src={`http://localhost:8800/images/${content.logo}`} alt="..." className="mx-auto" />
+              <img src={`https://porfolio-backend-e3rt.onrender.com/images/${content.logo}`} alt="..." className="mx-auto" />
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>
