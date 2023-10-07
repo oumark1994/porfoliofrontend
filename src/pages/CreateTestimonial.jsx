@@ -19,7 +19,7 @@ const CreateTestimonial = () => {
         formdata.append('review',review)
         formdata.append('image',image)
       
-        axios.post('http://localhost:8800/api/testimonials',formdata)
+        axios.post('https://porfolio-backend-e3rt.onrender.com/api/testimonials',formdata)
         .then(res=>{dispatch(addTestimonial(res.data))
             navigate('/testimonials')
         })
