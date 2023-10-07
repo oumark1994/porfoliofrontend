@@ -21,7 +21,7 @@ const CreateProject = () => {
         formdata.append('image',image)
         formdata.append('projectLink',projectLink)
       
-        axios.post('http://localhost:8800/api/projects',formdata)
+        axios.post('https://porfolio-backend-e3rt.onrender.com/api/projects',formdata)
         .then(res=>{dispatch(addProject(res.data))
             navigate('/projects')
         })
