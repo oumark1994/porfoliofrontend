@@ -17,7 +17,7 @@ const EditService = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        axios.put(`http://localhost:8800/api/services/${id}`,{id,title,para,logo})
+        axios.put(`https://porfolio-backend-e3rt.onrender.com/api/services/${id}`,{id,title,para,logo})
         .then(res=>{dispatch(updateService(res.data))
             navigate('/services')
         })
